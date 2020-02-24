@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:10.4
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgreSQL
+    restart: always
+    environment:
+      POSTGRES_ROOT_PASSWORD: postgres
+      POSTGRES_DB: shadow
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    networks:
+      - backend
+
+  shadow-docker-postgres:
+    depends_on:
+      - db
+    image: aliniribeiroo/shadow:latest
+    ports:
+      - "8080:8080"
+    restart: always
+    environment:
+      APP_DEFAULT_HOST: 0.0.0.0
+      APP_DEFAULT_PORT: 8080
+      BASE_PATH: /shadow
+      DATABASE_URI: postgresql://postgres:password@db:5432/shadow
+    networks:
+      - backend
+volumes:
+  db_data:
+
+### Networks Setup ############################################
+networks:
+  backend:
+    driver: "bridge"
