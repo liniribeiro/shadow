@@ -32,11 +32,16 @@ sns.set_subscription_attributes(
 )
 
 
-def publish_message(message: str, channel: str):
+def publish_message(sqs_message: str, channel: str):
     return sns.publish(
         TopicArn=topic_arn,
-        Message=message,
-        Subject=channel
+        Message=sqs_message,
+        MessageAttributes={
+            "channel": {
+                'DataType': 'String',
+                'StringValue': channel
+            }
+        }
     )
 
 
