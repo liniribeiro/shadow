@@ -6,12 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-pika = "*"
-celery = {extras = ["redis"],version = "*"}
-redis = "*"
-boto3 = "*"
 django = "*"
-sqlalchemy = "*"
 
 [requires]
 python_version = "3.8"
