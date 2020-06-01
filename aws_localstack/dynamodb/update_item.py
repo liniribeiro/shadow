@@ -28,6 +28,6 @@ def update_movie(title, year, rating, plot, actors, dynamodb=None):
 if __name__ == '__main__':
     update_response = update_movie(
         "The Big New Movie", 2015, 5.5, "Everything happens all at once.",
-        ["Larry", "Moe", "Curly"])
+        ["Larry3", "Moe5", "Curly7", "Alini"])
     print("Update movie succeeded:")
     pprint(update_response, sort_dicts=False)

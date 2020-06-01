@@ -29,3 +29,5 @@ if __name__ == '__main__':
     for movie in movies:
         print(f"\n{movie['year']} : {movie['title']}")
         pprint(movie['info'])
+
+

@@ -21,7 +21,7 @@ def put_movie(title, year, plot, rating, dynamodb=None):
 
 
 if __name__ == '__main__':
-    movie_resp = put_movie("The Big New Movie", 2015,
+    movie_resp = put_movie("The Big New Movie 2", 2020,
                            "Nothing happens at all.", 0)
     print("Put movie succeeded:")
     pprint(movie_resp, sort_dicts=False)
