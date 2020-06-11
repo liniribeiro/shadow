@@ -1,6 +1,6 @@
 import smtplib
 
-from files import SMTP_PASS, SMTP_LOGIN, GOOGLE_SMTP, GOOGLE_SMTP_PORT
+from smtp_email import SMTP_PASS, SMTP_LOGIN, GOOGLE_SMTP, GOOGLE_SMTP_PORT
 
 server = smtplib.SMTP_SSL(GOOGLE_SMTP, GOOGLE_SMTP_PORT)
 server.login(SMTP_LOGIN, SMTP_PASS)

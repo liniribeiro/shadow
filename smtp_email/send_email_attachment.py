@@ -3,7 +3,7 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from files import SMTP_PASS, SMTP_LOGIN, GOOGLE_SMTP, GOOGLE_SMTP_PORT
+from smtp_email import SMTP_PASS, SMTP_LOGIN, GOOGLE_SMTP, GOOGLE_SMTP_PORT
 
 send_from = SMTP_LOGIN
 send_to = SMTP_LOGIN
