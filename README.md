@@ -6,7 +6,7 @@ Repositório responsável por armazenar meus exercícios, testes e exemplos de c
 * [SQLAlchemy](https://www.sqlalchemy.org/)
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 * [Leitura de chaves armazenadas no s3](https://aws.amazon.com/pt/s3/)
-* [Envio de mensagens para SNS, utilizando filtros]https://docs.aws.amazon.com/pt_br/sns/latest/dg/welcome.html)
+* [Envio de mensagens para SNS, utilizando filtros](https://docs.aws.amazon.com/pt_br/sns/latest/dg/welcome.html)
 * [Consumo de mensagens de um SQS](https://aws.amazon.com/pt/sqs/)
 * [Processamento de mensagens utilizando RabbitMQ como broker](https://www.rabbitmq.com/tutorials/tutorial-one-python.html)
 * [Processamento de mensagens distribuidas com Celery](https://pypi.org/project/celery/) --
