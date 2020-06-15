@@ -12,6 +12,11 @@ redis = "*"
 boto3 = "*"
 django = "*"
 sqlalchemy = "*"
+gevent = "*"
+numpy = "*"
+validate-docbr = "*"
+pytest = "*"
+flask = "*"
 
 [requires]
 python_version = "3.8"
