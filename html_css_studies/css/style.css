@@ -1,0 +1,340 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  background: #E5E1E0;
+  padding: 20px 0;
+}
+
+.header-box {
+  position: relative;
+  width: 940px;
+  margin: 0 auto;
+}
+
+.bts-logo {
+  margin: 15px
+}
+
+nav {
+  position: absolute;
+  top: 65px;
+  right: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0 0 0 15px;
+}
+
+nav a {
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #C3A5DC;
+  text-decoration: underline;
+}
+
+.albums {
+  width: 940px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+/* faz com que cada item da lista fique lado a lado */
+.albums li {
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+  vertical-align: top;
+  margin: 0 1.5%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  border: 2px solid #000000;
+  border-radius: 10px;
+}
+
+.albums li:hover {
+  border-color: #C3A5DC;
+}
+
+.albums li:active {
+  border-color: #E8ADDF;
+}
+
+.albums li:hover h2{
+  font-size: 40px;
+}
+
+.albums h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.year {
+  font-size: 18px;
+
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.footer {
+  text-align: center;
+  background: url("../assets/footer.png");
+  padding: 20px 0;
+  width: 100%;
+}
+
+.image-footer {
+    width: 100%;
+}
+
+.copyright {
+  color: #FFFFFF;
+  font-size: 13px;
+  padding: 20px 0 0 ;
+}
+
+.contact-form {
+  width: 940px;
+  margin: 0 auto;
+}
+
+form {
+  margin: 40px 0;
+}
+
+form label, form legend {
+  display: block;
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.input-default {
+  display: block;
+  margin: 0 0 20px;
+  padding: 10px 25px;
+  width: 50%;
+}
+
+.checkbox {
+  margin: 20px 0;
+}
+
+.send {
+  width: 40%;
+  padding: 15px 0;
+  background: orange;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  transition: 1s all;
+  cursor: pointer;
+}
+
+.send:hover {
+  background: darkorange;
+  transform: rotate(2deg) scale(1.2);
+}
+
+table {
+  margin: 20px  0 40px;
+}
+
+thead {
+  background: #555555;
+  color: white;
+  font-weight: bold;
+}
+
+td, th {
+  border: 1px solid #000000;
+  padding: 8px 15px;
+}
+
+/* CSS da página inicial */
+.banner {
+  width: 100%;
+}
+
+.principal {
+  width: 940px;
+  margin: 0 auto;
+  padding: 3em 0;
+  background: #FEFEFE
+}
+
+.principal-title {
+  text-align: center;
+  font-size: 2em;
+  margin: 2em 0;
+  /* Clear limpa o float */
+  clear: left;
+  color: rgba(0,0,0, 0.6)
+}
+
+.principal-title:hover {
+    color: rgb(0,0,0)
+}
+
+.principal-title:first-letter {
+  font-weight: bold;
+}
+
+p:first-line {
+  font-style: italic;
+}
+
+.principal-title:before{
+  content: "[ ";
+}
+
+.principal-title:after{
+  content: " ]";
+}
+
+.img-principal {
+  width: 100px;
+  /* Float sobe todo o elemento e o que está a sua volta.
+  Também ocupa a parte da sombra para que os elementos ao lado, fiquem em volta dele.
+  anto o float:left quanto o float: right servem para que o elemento se destaque na tela, deixe de ocupar o espaço em que estava, para que os outros elementos possam se posicionar ao redor dele*/
+  float: left;
+  /* 0 -> cima, 20px -> diireita, 20px -> baixo, 0 esquerda.  */
+  margin: 0 20px 20px 0;
+}
+
+.principal p {
+  margin: 0 0 1em;
+}
+
+.principal strong{
+  font-weight: bold
+}
+
+.principal em{
+  font-style: italic;
+}
+
+.discografia {
+    padding: 1em 0;
+    background: #e6d0d6
+}
+
+.imagemdisc {
+  width: 50%;
+  opacity: 1
+  transition: 400ms;
+  vertical-align: middle;
+  /* X Y  Blur Cor */
+  box-shadow: 10px 10px 34px #000000, -20px 20px 5px rgba(255, 0, 0, 0.5);
+}
+
+.imagemdisc:hover {
+  opacity: 0.7;
+}
+
+
+.items{
+  line-height: 1.5em;
+}
+
+.items:before {
+  content: "⭑ "
+}
+
+.items:nth-child(2n) {
+  font-weight: bold;
+}
+
+.content {
+  width: 940px;
+  margin: 0 auto;
+
+}
+
+.albums-list {
+  width:40%;
+  display: inline-block;
+  vertical-align: top;
+
+}
+
+.map {
+  /* 3em para cima e para baixo, 0 nas laterais */
+  padding: 2em 0;
+  background: linear-gradient(#FEFEFE, #e6d0d6);
+}
+
+.map-content {
+  width: 940px;
+  margin: 0 auto;
+}
+
+
+.map p {
+  margin: 0 0 2em;
+  text-align: center;
+}
+
+.video-content {
+  width: 560px;
+  margin: 2em auto;
+}
+
+/* No css existem os pseudo-elementos -> :hover, :active, :visited, :required */
+/* Seletores avançados:  Apenas o paragrafo filho da main */
+/* main > p {background-color: red} */
+
+/* Apenas o p que é irmao de uma imagem  apenas 1.*/
+/* img + p {background-color: blue } */
+
+/* Apenas o p que é irmao de uma imagem  apenas Todos.*/
+/* img ~ p {background-color: blue } */
+
+/* todos paragrafos que não possuem o id missao */
+/* .principal p:not(#missao) {background-color: blue } */
+
+
+@media screen and (max-width: 480px){
+  .header-box, .principal, .map, .map-content,
+  .discografia, .albums,
+  .video-content, .content, .send {
+    width: auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  nav {
+    position: static;
+  }
+
+  .albums-list, .imagemdisc{
+    width: 100%
+  }
+
+  .albums li {
+    width: 80%;
+    margin: 10% 10%;
+  }
+
+  .contact-form {
+    margin: 10% 10%;
+    width: auto;
+  }
+
+
+}

@@ -3,6 +3,8 @@ from boto3.dynamodb.conditions import Key
 
 # Condiitions disponiveis para utilizar nas queries Dynamodb.
 # https://boto3.amazonaws.com/v1/documentation/api/latest/reference/customizations/dynamodb.html#dynamodb-conditions
+
+
 def query_movies(year, dynamodb=None):
     if not dynamodb:
         dynamodb = boto3.resource('dynamodb', endpoint_url="http://localhost:4569")

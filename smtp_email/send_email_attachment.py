@@ -12,13 +12,11 @@ text = "Em anexo você encontra a solicitação de exportação do arquivo, real
 
 file_name = 'contacts.csv'
 
-
 def get_body() -> MIMEMultipart:
     message = MIMEMultipart()
-    message['From'] = f"Admin <{send_from}>"
+    message['From'] = f"Tutoial <{send_from}>"
     message['To'] = send_to
     message['Subject'] = subject
-    message.preamble = 'preamble'
 
     body = MIMEText(text)
     message.attach(body)

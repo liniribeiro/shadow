@@ -1,0 +1,59 @@
+
+
+#banner {
+  width: 100%
+}
+
+.principal {
+  background: #E5E1E0;
+  padding: 30px
+}
+
+.center-title  {
+  text-align: center
+}
+
+.princ-title {
+  padding-left: 40px
+}
+
+p {
+  text-align: center
+}
+
+em strong {
+  color: #FF0000
+}
+
+.albums-list {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  margin: 10%
+}
+
+.items {
+  font-style: italic
+}
+
+.discografia {
+  background: #FFFFFF;
+  padding: 20px
+}
+
+.imagemdisc {
+  width: 50%;
+  padding: 20px
+}
+
+footer {
+  text-align: center;
+  background: url("../assets/footer.png");
+  padding: 20px 0;
+}
+
+.copyright {
+  color: #FFFFFF;
+  font-size: 13px;
+  padding: 20px 0 0 ;
+}

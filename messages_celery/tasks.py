@@ -22,4 +22,4 @@ def first_task():
 # Para executar a aplicação podemos utilizar o comando:  celery -A tasks worker --loglevel=info
 # Para chamar nossa task:
 # from tasks import first_task
-# first_task.delay()
+first_task.delay()
