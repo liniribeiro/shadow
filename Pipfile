@@ -17,6 +17,7 @@ numpy = "*"
 validate-docbr = "*"
 pytest = "*"
 flask = "*"
+factory-boy = "*"
 
 [requires]
 python_version = "3.8"

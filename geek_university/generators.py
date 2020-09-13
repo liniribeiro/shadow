@@ -62,89 +62,113 @@ print("-------------------")
     yield sempre fica esperando um next
 '''
 
-# Função geradora - Gera um generator
-def first_yeld_example(max_value):
-    cont = 1
-    while cont <= max_value:
-        yield cont
-        cont +=1
+# # Função geradora - Gera um generator
+# def first_yeld_example(max_value):
+#     cont = 1
+#     while cont <= max_value:
+#         yield cont
+#         cont +=1
+#
+#
+# gen = first_yeld_example(5)
+# # print(type(gen))
+# # print(next(gen))
+# # print(next(gen))
+# # print(next(gen))
+# # print(next(gen))
+#
+# # for num in gen:
+# #     print(num)
+#
+# """
+#     Teste de memória com generators
+#
+#     Seequencia fibonacci: 1, 1, 2, 3, 5, 8, 13
+# """
+#
+# # 3 MB
+# def fibon_gen(max):
+#     a, b, contador = 0, 1, 0
+#     while contador < max:
+#         a, b = b, a + b
+#         yield a
+#         contador += 1
+#
+# # 440 MB
+# def fibon_normal(max):
+#     nums = []
+#     a, b = 0, 1
+#     while len(nums) < max:
+#         nums.append(b)
+#         a, b = b, a + b
+#     return nums
+#
+#
+# for n in fibon_gen(3):
+#     print(n)
+#
+# print("-------------------")
+#
+# '''
+#     Teste de velocidade com Expressões geradoras
+#
+# '''
+#
+#
+# # Generators
+# def nums():
+#     for num in range(1, 5):
+#         yield num
+#
+# gen = nums()
+# # Generator
+# print(gen)
+#
+# # Generator expression
+#
+# gen2 = (num for num in range(1, 5))
+# print(gen2)
+# print(next(gen2))
+# print(next(gen2))
+# print(next(gen2))
+#
+# print(sum(num for num in range(1, 10)))
+#
+# # Teste de velocidade
+#
+# # Generator expression
+# gen_init = time.time()
+# print(sum(num for num in range(1, 100000000)))
+# gen_final = time.time() - gen_init
+#
+# # List Comprehention
+# gen_init2 = time.time()
+# print(sum([num for num in range(1, 100000000)]))
+# gen_final2 = time.time() - gen_init
+#
+# print(f"Generator eexpression : {gen_final}")
+# print(f"List Comprehention : {gen_final2}")
 
 
-gen = first_yeld_example(5)
-# print(type(gen))
-# print(next(gen))
-# print(next(gen))
-# print(next(gen))
-# print(next(gen))
 
-# for num in gen:
-#     print(num)
-
-"""
-    Teste de memória com generators
-    
-    Seequencia fibonacci: 1, 1, 2, 3, 5, 8, 13
-"""
-
-# 3 MB
-def fibon_gen(max):
-    a, b, contador = 0, 1, 0
-    while contador < max:
-        a, b = b, a + b
-        yield a
-        contador += 1
-
-# 440 MB
-def fibon_normal(max):
-    nums = []
-    a, b = 0, 1
-    while len(nums) < max:
-        nums.append(b)
-        a, b = b, a + b
-    return nums
+from itertools import islice
 
 
-for n in fibon_gen(3):
-    print(n)
 
-print("-------------------")
-
-'''
-    Teste de velocidade com Expressões geradoras
-    
-'''
+def split_every(n, iterable):
+    i = iter(iterable)
+    piece = list(islice(i, n))
+    while piece:
+        yield piece
+        piece = list(islice(i, n))
 
 
-# Generators
 def nums():
-    for num in range(1, 5):
+    for num in range(1, 670):
         yield num
 
 gen = nums()
-# Generator
-print(gen)
+splited = split_every(5, gen)
 
-# Generator expression
-
-gen2 = (num for num in range(1, 5))
-print(gen2)
-print(next(gen2))
-print(next(gen2))
-print(next(gen2))
-
-print(sum(num for num in range(1, 10)))
-
-# Teste de velocidade
-
-# Generator expression
-gen_init = time.time()
-print(sum(num for num in range(1, 100000000)))
-gen_final = time.time() - gen_init
-
-# List Comprehention
-gen_init2 = time.time()
-print(sum([num for num in range(1, 100000000)]))
-gen_final2 = time.time() - gen_init
-
-print(f"Generator eexpression : {gen_final}")
-print(f"List Comprehention : {gen_final2}")
+for x in splited:
+    print(x)
