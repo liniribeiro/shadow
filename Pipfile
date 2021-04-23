@@ -18,6 +18,8 @@ validate-docbr = "*"
 pytest = "*"
 flask = "*"
 factory-boy = "*"
+python-json-logger = "*"
+json_log_formatter = "*"
 
 [requires]
 python_version = "3.8"
